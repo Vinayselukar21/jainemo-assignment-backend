@@ -8,13 +8,15 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (including devDependencies for build)
+# Install all dependencies (including devDependencies for build)
 RUN npm ci
 
-# Copy source code
-COPY . .
+# Copy TypeScript config and source code
+COPY tsconfig.json ./
+COPY src ./src
+COPY scripts ./scripts
 
-# Build TypeScript to JavaScript
+# Build TypeScript to JavaScript and fix imports
 RUN npm run build
 
 # Stage 2: Production stage
@@ -46,4 +48,3 @@ EXPOSE 4000
 
 # Start the application
 CMD ["node", "dist/server.js"]
-
