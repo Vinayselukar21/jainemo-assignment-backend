@@ -1,10 +1,9 @@
 {
   "name": "dsa-sheet-backend",
-  "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
-    "build": "tsc -p tsconfig.json && node scripts/fix-imports.js",
+    "build": "tsc -p tsconfig.json",
     "build:tsc": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .ts",
     "seed": "tsx src/seed/seed.ts"
