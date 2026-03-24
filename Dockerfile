@@ -35,7 +35,7 @@ EXPOSE 4000
 # Default environment variables (can be overridden by --env-file)
 ENV NODE_ENV=development \
     PORT=4000 \
-    MONGO_URI="mongodb+srv://vselukar210l@dsasheetcluster.gj3flch.mongodb.net/?appName=DSASheetCluster" \
+    MONGO_URI="mongodb+srv://vinay:B0ve92Uea9I1CLEJ@ai-kb.nlojeej.mongodb.net/ai-kb-db?appName=ai-kb" \
     JWT_ACCESS_SECRET="change_me_access" \
     JWT_REFRESH_SECRET="change_me_refresh" \
     ACCESS_TOKEN_TTL="15m" \
